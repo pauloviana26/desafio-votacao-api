@@ -1,0 +1,44 @@
+desafio-votacao-api:
+   user-info-api-url: https://user-info.herokuapp.com
+spring:
+   main:
+      allow-bean-definition-overriding: true
+   application:
+      name: desafio-votacao-api
+   mvc:
+      locale: pt_BR
+      locale-resolver: fixed
+   datasource:
+      url: ${VOTACAO_DATABASE_URL}
+      username: ${VOTACAO_DATABASE_USERNAME}
+      password: ${VOTACAO_DATABASE_PASSWORD}
+   flyway:
+      enabled: true
+      url: ${VOTACAO_DATABASE_URL}
+      username: ${VOTACAO_DATABASE_USERNAME}
+      password: ${VOTACAO_DATABASE_PASSWORD}
+      locations: classpath:db/migration
+      schemas: votacao
+      table: flyway_schema_history
+   jpa:
+      hibernate:
+         ddl-auto: none
+      open-in-view: false
+      properties:
+         hibernate:
+            default_schema: votacao
+feign:
+   client:
+      config:
+        default:
+           loggerLevel: full
+
+logging:
+   level:
+      root: info
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
