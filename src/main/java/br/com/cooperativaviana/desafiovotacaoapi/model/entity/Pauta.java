@@ -14,7 +14,7 @@ public class Pauta {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_pauta", nullable = false)
+	@Column(name = "id_pauta")
 	private Long idPauta;
 	
 	@NotNull

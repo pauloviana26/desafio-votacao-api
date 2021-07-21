@@ -9,12 +9,12 @@ spring:
       locale: pt_BR
       locale-resolver: fixed
    datasource:
-      url: jdbc:mysql://localhost:3306/
+      url: jdbc:mysql://localhost:3306/votacao
       username: root
       password: admin123
    flyway:
       enabled: true
-      url: jdbc:mysql://localhost:3306/
+      url: jdbc:mysql://localhost:3306/votacao
       username: root
       password: admin123
       locations: classpath:db/migration

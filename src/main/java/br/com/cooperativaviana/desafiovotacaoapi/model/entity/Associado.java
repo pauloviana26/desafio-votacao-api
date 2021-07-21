@@ -16,7 +16,7 @@ public class Associado {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_associado", nullable = false)
+	@Column(name = "id_associado")
 	private Long idAssociado;
 	
 	@NotNull

@@ -71,7 +71,7 @@ public class AssembleiaService {
 			throw new NegocioException(messageHelper.getMessage("registro.inexistente.pauta"));
 		}
 		
-		if(!sessaoRepository.existsSessaoByPauta_idPauta(valor.getIdPauta())) {
+		if(sessaoRepository.existsSessaoByPauta_idPauta(valor.getIdPauta())) {
 			throw new NegocioException(messageHelper.getMessage("registro.existente.sessao"));
 		}
 	}

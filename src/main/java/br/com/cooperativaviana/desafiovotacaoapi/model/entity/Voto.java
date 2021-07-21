@@ -20,7 +20,7 @@ public class Voto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_voto", nullable = false)
+	@Column(name = "id_voto")
 	private Long idVoto;
 	
 	@NotNull
