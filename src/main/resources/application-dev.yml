@@ -44,4 +44,4 @@ management:
         include: "*"
         
 server:
-  port: ${PORT}
+  port: 8080
